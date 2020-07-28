@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D5310120-1180-4A53-830A-CA5D50AF3DBC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Auth.GG Winform Example</RootNamespace>
+    <AssemblyName>Auth.GG Winform Example</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60DC8134-EBA5-43B8-BCC9-BB4BC16C2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <StartupObject>Auth.GG_Winform_Example.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2">
+      <HintPath>..\..\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Siticone.UI">
+      <HintPath>..\..\Siticone.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Authenticate\Spoofer.cs" />
+    <Compile Include="Auth\GG_Winform_Example\API.cs" />
+    <Compile Include="Auth\GG_Winform_Example\App.cs" />
+    <Compile Include="Auth\GG_Winform_Example\ApplicationSettings.cs" />
+    <Compile Include="Auth\GG_Winform_Example\Constants.cs" />
+    <Compile Include="Auth\GG_Winform_Example\Encryption.cs" />
+    <Compile Include="Auth\GG_Winform_Example\InfoManager.cs" />
+    <Compile Include="Auth\GG_Winform_Example\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Auth\GG_Winform_Example\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Auth\GG_Winform_Example\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Auth\GG_Winform_Example\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Auth\GG_Winform_Example\OnProgramStart.cs" />
+    <Compile Include="Auth\GG_Winform_Example\Program.cs" />
+    <Compile Include="Auth\GG_Winform_Example\Properties\Resources.cs" />
+    <Compile Include="Auth\GG_Winform_Example\Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Auth\GG_Winform_Example\Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Auth\GG_Winform_Example\Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Auth\GG_Winform_Example\Security.cs" />
+    <Compile Include="Auth\GG_Winform_Example\User.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Auth\GG_Winform_Example\Login.resources" />
+    <EmbeddedResource Include="Auth\GG_Winform_Example\Main.resources" />
+    <EmbeddedResource Include="Auth\GG_Winform_Example\Properties\Resources.resources" />
+    <EmbeddedResource Include="Auth\GG_Winform_Example\Register.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+    <None Include="Auth\GG_Winform_Example\Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
